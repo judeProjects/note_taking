@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+    <body>
+
+        <%- include('../partials/nav.ejs')%>
+
+        <div class = 'create-notes content'>
+            <form action = "/notes" method = "POST">
+                <label for = "title"> Note title: </label>
+                <input type = "text" id = "title" name = "title" required>
+                <label for = "content"> Note body: </label>
+                <textarea id = "content" name = "content" required></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

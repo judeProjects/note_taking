@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+    <body>
+
+        <%- include('../partials/nav.ejs')%>
+
+        <div class = 'create-notes content'>
+            <h2>Edit Note</h2>
+            <form action = "/notes/<%= note.id %>?_method=PUT" method = "POST">
+                <label for = "title"> Note title: </label>
+                <input type = "text" id = "title" name = "title" value = <%= note.title%> required>
+                <label for = "content"> Note body: </label>
+                <textarea id = "content" name = "content" required> <%= note.content%> </textarea>
+                <button>Edit</button>
+            </form>
+        </div>
+    </body>
+</html>

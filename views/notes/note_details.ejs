@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+    <body>
+
+        <%- include('../partials/nav.ejs')%>
+
+        <div class = 'details content'>
+            <h2> <%= note.title %> </h2>
+            <div class = "content">
+                <div class = "content-text">
+                    <p><%= note.content %></p>
+                </div>
+            </div>
+            <form action = "/notes/<%=note.id%>?_method=DELETE" method = "POST">
+                <button class = "delete"> DELETE </button>
+            </form>
+            <a href = "/notes/edit/<%= note.id %>" class = "edit"> EDIT </a>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+<body>
+    
+    <%- include('../partials/nav.ejs')%>
+    <div class = 'blogs content'>
+        
+        <% if (notes.length) { %>
+            <h2> Notes Lists </h2>
+            <% notes.forEach(note => { %>
+                <a class = "single" href = "/notes/<%= note._id%>">
+                    <h3 class = "title"> <%= note['title'] %> </h3>
+                    <p class = "snippet"> <%= note['content'] %> </p>
+            <% }); %>
+        <% } else { %>
+            <h3> Notes List Empty!! </h3>
+        <% } %>
+    </div>
+
+</body>
+</html>
